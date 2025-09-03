@@ -39,6 +39,3 @@ func New(log *log.Logger) (*Server, error) {
 		HttpServer: httpServer,
 	}, nil
 }
-
-//добьавление хендлеров
-//старт и стоп
