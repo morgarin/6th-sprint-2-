@@ -36,7 +36,7 @@ func UploadHandler(w http.ResponseWriter, req *http.Request, log *log.Logger) {
 		http.Error(w, fmt.Sprintf("The server does not support %s requests", req.Method), http.StatusBadRequest)
 		return
 	}
-	file, handler, err := req.FormFile("newFile")
+	file, handler, err := req.FormFile("myFile")
 	if err != nil {
 		log.Println("Receiving file error:", err)
 		http.Error(w, "Receiving file error", http.StatusInternalServerError)
